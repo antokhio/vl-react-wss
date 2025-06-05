@@ -2,6 +2,8 @@
 
 Shows how to VL React Websocket
 
+![image](https://github.com/user-attachments/assets/f1441036-0d50-43b4-81d1-5a72d9a003da)
+
 ### Installation
 
 ```sh
