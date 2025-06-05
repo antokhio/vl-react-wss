@@ -1,13 +1,5 @@
 import { CircularProgress, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-// import { io } from "socket.io-client";
-
-// const socket = io(
-//   `ws://${import.meta.env.VITE_WSS_HOST}:${import.meta.env.VITE_WSS_PORT}`,
-//   {
-//     transports: ["websocket"],
-//   }
-// );
 
 const socket = new WebSocket(
   `ws://${import.meta.env.VITE_WSS_HOST}:${import.meta.env.VITE_WSS_PORT}`
@@ -40,7 +32,7 @@ const SocketProvider = ({ children }: SocketProviderProps) => {
     };
   }, []);
 
-  return isConnected ? (
+  return !isConnected ? (
     <Stack alignItems="center" spacing={2}>
       <CircularProgress />
       <Typography>Loading...</Typography>

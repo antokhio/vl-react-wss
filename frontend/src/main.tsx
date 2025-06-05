@@ -8,10 +8,11 @@ import { SocketProvider } from "./socket/socket.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider theme={theme} />
-    <CssBaseline />
-    <SocketProvider>
-      <App />
-    </SocketProvider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <SocketProvider>
+        <App />
+      </SocketProvider>
+    </ThemeProvider>
   </StrictMode>
 );
